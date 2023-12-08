@@ -12,8 +12,9 @@ pub async fn get_access(user: RefreshUser, jar: CookieJar) -> axum::response::Re
 
     // Add JWT to jar
     let cookie = Cookie::build(("access", jwt))
-        // TODO : Optionally set cookie's parameters
-        ;
+    // DONE : Optionally set cookie's parameters
+        .secure(true)
+        .http_only(true);
     let jar = jar.add(cookie);
 
     Ok(jar)

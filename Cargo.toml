@@ -5,6 +5,7 @@ edition = "2021"
 authors = ["Jean-François Pasche <jean-francois.pasche@heig-vd.ch>", "Maxim Golay <maxim.golay@heig-vd.ch>", "Pascal Perrenoud <pascal.perrenoud@heig-vd.ch", "Axel Vallon <axel.vallon@heig-vd.ch>"]
 
 [dependencies]
+jsonwebtoken = "9.2.0"
 anyhow = "1.0.75"
 axum = {version = "0.7.1", features = ["json", "macros"]}
 axum-extra = { version = "0.9.0", features = ["cookie"] }
@@ -24,3 +25,4 @@ serde_with = "3.4.0"
 serde_millis = "0.1.1"
 tower-sessions = "0.7.0"
 tower = "0.4.13"
+hmac = "0.12.1"
